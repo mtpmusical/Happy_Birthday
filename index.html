@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta content="width=device-width, initial-scale=1, user-scalable=1, minimum-scale=1, maximum-scale=5" name="viewport" />
+  <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Shippori+Antique:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.all.min.js"></script>
+  <link rel="stylesheet" href="./style.css">
+  <script src="https://unpkg.com/typeit@8.7.0/dist/index.umd.js"></script>
+
+  <!-- Update title and description for a birthday theme -->
+  <title>HBD 5.0 | Thanh Tâm</title>
+  <link rel="icon" type="image/x-icon" href="https://www.palingit.com/favicon.ico" />
+  <meta name="description" content="A special birthday greeting" />
+</head>
+
+<body style="background: linear-gradient(to bottom, #ffe1e1, #ff217de0), url(./r.jpg);
+    height: 100vh;">
+  <audio src="./y2mate (mp3cut.net).mp3" id="linkmp3" class="sembunyi"></audio>
+
+  <div id="bodyblur">
+    <!-- Wallpaper -->
+    <img src="" id="wallpaper" />
+  </div>
+
+  <div id="Content">
+    <div id="kadoIn">
+      <!-- Gift Button -->
+      <img src="./Valentine-Surprise.png" alt="Open Gift Button" />
+    </div>
+    <p id="ket">
+      <span style="font-style: italic; color: rgb(0,0,0); margin-top: 3px !important; ">Không biết quà hay bom đây… nếu nổ thì nổ trong tim! 😆</span>
+    </p>
+
+    <div class="kumpulanstiker" style="margin-top: 95px;">
+      <!-- Stickers for Content -->
+      <img src="https://www.gifcen.com/wp-content/uploads/2024/12/happy-birthday-gif.gif" id="fotostiker" />
+      <img src="https://feeldreams.github.io/bunga.gif" id="fotostiker1" />
+      <img src="https://feeldreams.github.io/pandacoklat.gif" id="fotostiker2" />
+      <img src="https://www.gifcen.com/wp-content/uploads/2024/09/happy-birthday-gif-9.gif" id="fotostiker3" />
+      <img src="https://feeldreams.github.io/emawh.gif" id="fotostiker4" />
+      <img src="https://feeldreams.github.io/pandacoklat.gif" id="fotostiker5" />
+    </div>
+
+    <p id="halo" class="halo"></p>
+
+    <div>
+      <blockquote id="bq" data-text="💞">
+        <!-- Update the messages for a birthday greeting -->
+        <p id="kalimat">
+          Chúc em tuổi mới xinh hơn, vui hơn, hạnh phúc hơn! Hôm nay là ngày để ăn mừng em ra đời! 🎁
+        </p>
+
+        <!-- Message -->
+        <p id="pesan1">Chạm nhẹ là có quà, chạm mạnh… thì vẫn có bất ngờ!🎉</p>
+        <div id="kolombaru">
+          <li id="lv1">🎂</li>
+          <li id="lv2">🎁</li>
+          <li id="lv3">🥳</li>
+          <li id="lv4">💖</li>
+        </div>
+
+        <p id="pesan2">Tuổi mới xinh hơn 😜 ✨</p>
+        <p id="pesan3">Có một điều khiến hôm nay khác biệt hẳn – Em biết là gì không?</p>
+        <p id="pesan4" class="sty2">Hôm nay là sinh nhật của em đấy! 🥰 </p>
+        <p id="pesan5" class="sty2">
+          Chúc người đặc biệt nhất hệ mặt trời một ngày sinh nhật bùng nổ như pháo hoa (nhưng đừng nổ vì quà hơi nhỏ nha!) 🎆
+        </p>
+        <p id="pesan6" class="sty2">
+          Em không chỉ xứng đáng được hạnh phúc, mà còn xứng đáng… ngủ nướng, ăn no, nhận quà và được khen “hôm nay đẹp quá” ít nhất 3 lần! 😄
+        </p>
+
+        <!-- Next Button -->
+        <p id="opsL">Sinh nhật mà, nhấn đại biết đâu chuyển khoản 5 triệu vào tài khoản! 🎉</p>
+      </blockquote>
+    </div>
+
+    <!-- Send Message Button -->
+    <div id="Tombol"><a id="By">&#128140; Next</a></div>
+
+    <!-- Rejected Message (if needed) -->
+    <div id="pesanditolak">
+      <img id="stikerditolak" src="https://feeldreams.github.io/weee.gif" />
+      <p id="kataditolak">
+        Ồ! Em không thể bỏ qua phép thuật sinh nhật này được 🤣
+      </p>
+    </div>
+  </div>
+
+  <script>
+    // Main script remains similar; further changes are made in a.js if needed.
+    const body = document.querySelector("body");
+    const swalst = Swal.mixin({
+      timer: 2300,
+      allowOutsideClick: false,
+      showConfirmButton: false,
+      timerProgressBar: true,
+      imageHeight: 90,
+    });
+    audio = new Audio("" + linkmp3.src);
+    ftganti = 0;
+    fungsi = 0;
+    fungsiAwal = 0;
+    deffotostiker = fotostiker.src;
+    Content.style = "opacity:1;margin-top:16vh";
+    const swals = Swal.mixin({
+      allowOutsideClick: false,
+      cancelButtonColor: "#FF0040",
+      imageHeight: 80,
+    });
+
+    document.getElementById("kadoIn").onclick = function () {
+      if (fungsiAwal == 0) {
+        audio.play();
+        fungsiAwal = 1;
+        kadoIn.style =
+          "transition:all .8s ease;transform:scale(10);opacity:0";
+        wallpaper.style = "transform: scale(1.5);";
+        ket.style = "display:none";
+        setTimeout(initengahan, 300);
+        setTimeout(inipesan, 500);
+      }
+    };
+
+    async function inipesan() {
+      var { value: nama } = await swals.fire({
+        title: "Tên em là gì nhỉ? Anh cần biết để lưu vào danh sách “người dễ thương nhất hôm nay”! 😊",
+        input: "text",
+      });
+      if (nama && nama.length < 11) {
+        window.nama = nama;
+        vketikhalo = "Chúc mừng sinh nhật, " + nama + "!";
+        mulainama();
+      } else {
+        await Swal.fire({
+          title: "Tên em hay đấy, nhưng mà dài rồi nhé !",
+          text: "Nhập cái tên dễ thương hơn nào",
+          icon: "Báo động kkk",
+        });
+        inipesan();
+      }
+    }
+
+    var tanya = "Chúng ta cùng nhau tổ chức sinh nhật cho em nào?";
+    var opstanya = "Sự lựa chọn của em là:";
+    var tompositif = "Hãy hát tặng anh 1 bài 🤭 🎉";
+    var tomnegatif = "Gửi tặng lại quà cho anh 😆 Thấy hay thì nhớ tới anh cũng được 😜";
+
+    async function pertanyaan() {
+      var { isConfirmed: prtanya } = await swals.fire({
+        title: nama + ", " + tanya,
+        text: "" + opstanya,
+        imageUrl: "" + fotostiker5.src,
+        showCancelButton: true,
+        confirmButtonText: "" + tompositif,
+        cancelButtonText: "" + tomnegatif,
+      });
+      if (prtanya) {
+        pesanwhatsapp = "Yes " + nama + ", Hãy bắt đầu sinh nhật nào";
+        menuju();
+      } else {
+        pesanwhatsapp = nama + ", đừng bỏ lỡ niềm vui sinh nhật!";
+        await swalst.fire({
+          title: "" + kataditolak.innerHTML,
+          timer: 2000,
+          imageUrl: "" + stikerditolak.src,
+        });
+        menuju();
+      }
+    }
+  </script>
+  <script src="a.js"></script>
+</body>
+
+</html>
